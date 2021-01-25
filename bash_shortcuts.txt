@@ -1,0 +1,5 @@
+# search for string in all files in directory, delete line with string, create backup files with flag -i
+grep -rli <string> * | xargs sed -i '.bkp' '/<string>/d'
+
+#delete all backup files
+find . -name "*.bkp"
